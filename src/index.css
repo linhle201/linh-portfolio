@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+body {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins globally */
+  @apply bg-gradient-to-r from-red-100 to-gray-950; /* Apply gradient background */
+}
+
+
+h2, h3 {
+  font-family: 'Acme', cursive; /* Example of using Acme for h2 */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to the h2 */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+/* .waviy class styles */
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+}
+
+.waviy span {
+  font-family: 'Acme', cursive;
+  position: relative;
+  display: inline-block;
+  animation: waviy 3s infinite;
+  animation-delay: calc(.4s * var(--i));
+}
+
+/* Keyframe for the wave effect */
+@keyframes waviy {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  pointer-events: none; 
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: snowfall 1s linear infinite;
+}
+
+.snowflake:nth-child(1) {
+  left: 10%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+  width: 10px;
+  height: 10px;
+}
+
+.snowflake:nth-child(2) {
+  left: 25%;
+  animation-duration: 15s;
+  animation-delay: 4s;
+  width: 12px;
+  height: 12px;
+}
+
+.snowflake:nth-child(3) {
+  left: 40%;
+  animation-duration: 20s;
+  animation-delay: 1s;
+  width: 8px;
+  height: 8px;
+}
+
+.snowflake:nth-child(4) {
+  left: 60%;
+  animation-duration: 18s;
+  animation-delay: 3s;
+  width: 14px;
+  height: 14px;
+}
+
+.snowflake:nth-child(5) {
+  left: 80%;
+  animation-duration: 13s;
+  animation-delay: 5s;
+  width: 9px;
+  height: 9px;
+}
+
+.snowflake:nth-child(6) {
+  left: 90%;
+  animation-duration: 14s;
+  animation-delay: 7s;
+  width: 11px;
+  height: 11px;
+}
+
+.snowflake:nth-child(7) {
+  left: 50%;
+  animation-duration: 17s;
+  animation-delay: 2s;
+  width: 6px;
+  height: 6px;
+}
+
+.snowflake:nth-child(8) {
+  left: 30%;
+  animation-duration: 16s;
+  animation-delay: 6s;
+  width: 13px;
+  height: 13px;
+}
+
+/* Snowfall animation */
+@keyframes snowfall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
