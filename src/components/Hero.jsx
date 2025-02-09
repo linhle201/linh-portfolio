@@ -72,7 +72,7 @@ const Hero = () => {
 
           {/* Instagram Icon with Square Frame */}
           <a
-            href="https://www.instagram.com/your-instagram-profile"
+            href="https://www.instagram.com/_amibelita._"
             target="_blank"
             rel="noopener noreferrer"
             className="text-red-300 text-xl sm:text-2xl hover:text-white transition-all p-2 border-2 border-red-300 rounded-md hover:border-white"
@@ -96,7 +96,7 @@ const Hero = () => {
 
           {/* LinkedIn Icon with Square Frame */}
           <a
-            href="https://www.linkedin.com/your-instagram-profile"
+            href="https://www.linkedin.com/in/linh-thi-my-le-04a375165/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-red-300 text-xl sm:text-2xl hover:text-white transition-all p-2 border-2 border-red-300 rounded-md hover:border-white"
