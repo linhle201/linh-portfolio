@@ -18,7 +18,7 @@
     "react-router-dom": "^7.1.5",
     "three": "^0.173.0"
   },
-  "homepage": "https://<your-username>.github.io/<your-repo-name>",
+  "homepage": "https://<your-username>.github.io",
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@types/react": "^18.3.18",
