@@ -59,7 +59,7 @@ const About = () => {
             Target
           </h3>
           <p className="text-sm sm:text-sm md:text-sm lg:text-sm text-gray-800">
-            Graduated with a degree in Computer Science from ABC University. Took specialized courses in web development, data structures, and algorithms.
+          Graduated with a degree in Web Development from Nova Scotia Community College. Focused on web development, programming languages, and modern frameworks. After graduation, eager to deepen expertise in UX/UI product design and explore 3D web design using tools like Three.js, combining creativity with technical skills to build immersive digital experiences.
           </p>
         </div>
       </div>
