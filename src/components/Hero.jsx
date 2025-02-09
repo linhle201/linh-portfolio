@@ -5,7 +5,14 @@ const Hero = () => {
     <>
       {/* Snowflakes animation */}
       <div className="snowflakes">
-        {/* Snowflakes div elements */}
+      <div className="snowflake"></div>
+        <div className="snowflake"></div>
+        <div className="snowflake"></div>
+        <div className="snowflake"></div>
+        <div className="snowflake"></div>
+        <div className="snowflake"></div>
+        <div className="snowflake"></div>
+        <div className="snowflake"></div>
       </div>
 
       {/* Overlay to darken the background */}
