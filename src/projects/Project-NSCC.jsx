@@ -4,7 +4,7 @@ const ProjectNSCC = () => {
   const project = {
     title: " Redesign NSCC Website",
     imageUrls: [
-      "../PJ-nscc/final.PNG", // First image
+      "../PJ-nscc/final.PNG", 
     ],
     video: "../PJ-nscc/nscc.mp4",
     cta: "../PJ-nscc/cta.png",

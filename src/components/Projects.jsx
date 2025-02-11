@@ -17,7 +17,7 @@ const Projects = () => {
       id: 2, 
       title: "Project Tracking Halifax Buses", 
       videoUrl: "../PJ-bus/bus.mp4", 
-      githubUrl: "https://github.com/linhle201/Halifax-Buses", // External URL
+      githubUrl: "/buses", 
       description: "A project to track real-time bus locations and schedules in Halifax."
     },
     { 
