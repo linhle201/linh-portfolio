@@ -62,7 +62,7 @@ const projects = [
     id: 9, 
     title: "Project Redesign NSCC Website", 
     videoUrl: "../PJ-nscc/nscc.mp4", 
-    githubUrl: "https://github.com/linhle201/NSCC-Redesign-Website",
+    githubUrl: "/projects/nscc",
     description: " This redesign of the Nova Scotia Community College website, focusing on improving user experience and accessibility. The new design features an intuitive interface, streamlined navigation, and enhanced accessibility for all users, ensuring a more inclusive and engaging online experience."
   },
 ];
