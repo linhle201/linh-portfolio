@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectNSCC = () => {
   const project = {
-    title: "Project Redesign NSCC Website",
+    title: " Redesign NSCC Website",
     imageUrls: [
       "../PJ-nscc/final.PNG", // First image
     ],
@@ -27,33 +27,32 @@ const ProjectNSCC = () => {
         <div className="project-details bg-black border-4 border-black bg-opacity-40 rounded-lg overflow-hidden shadow-lg p-6">
           {/* First image (image on right, description on left) */}
           <div className="flex flex-col md:flex-row items-center mb-6">
-                <div className="text-left md:w-1/2 pr-6">
-                    <p className="text-lg text-white">{project.description}</p>
+                <div className="text-left md:w-2/3 pr-6">
+                    <h3 className="text-xl text-red-300 font-semibold mt-4">Project Details</h3><br></br>
+                    <p className="text-sm text-white">{project.description}</p>
+                    <p className="text-sm text-white mt-2">{project.details}</p>
+                    <h3 className="text-xl text-red-300 font-semibold mt-4">Color Palette Research</h3><br></br>
+                    <div className="w-full h-64 mb-6">
+                        <img
+                        src={project.colorPaletteUrl}
+                        alt="Color Palette"
+                        className="w-full h-full object-contain rounded-lg"
+                        />
+                    </div><br></br>
+                    <p className="text-sm text-white mb-4">
+                        The color palette was designed with accessibility in mind. We selected a set of colors that ensure high contrast for readability and a modern look. The palette ensures that content is easy to read and the interface is aesthetically pleasing, enhancing the overall user experience.
+                    </p>
+                
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-1/3">
                     <img
                     src={project.imageUrls[0]}
                     alt="NSCC Redesign"
-                    className="w-full max-w-lg h-80 object-contain rounded-lg"
+                    className="w-full max-w-lg h-100 object-contain rounded-lg"
                     />
                 </div>
+                
           </div>
-
-          <h3 className="text-xl text-red-300 font-semibold mt-4">Project Details</h3>
-          <p className="text-sm text-white mt-2">{project.details}</p>
-
-          {/* Color Palette */}
-          <h3 className="text-xl text-red-300 font-semibold mt-4">Color Palette Research</h3>
-          <div className="w-full h-64 mb-6">
-            <img
-              src={project.colorPaletteUrl}
-              alt="Color Palette"
-              className="w-full h-full object-contain rounded-lg"
-            />
-          </div>
-          <p className="text-sm text-white mb-4">
-            The color palette was designed with accessibility in mind. We selected a set of colors that ensure high contrast for readability and a modern look. The palette ensures that content is easy to read and the interface is aesthetically pleasing, enhancing the overall user experience.
-          </p>
 
           {/* Menu Navigation Redesign */}
           <h3 className="text-xl text-red-300 font-semibold mt-4">Redesign of Menu Navigation</h3>
@@ -112,7 +111,7 @@ const ProjectNSCC = () => {
                 </a>
                
             <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
-                <button className="flex items-center justify-center bg-black text-red-300 px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300">
+                <button className="flex items-center justify-center bg-black text-red-300 px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
                 <svg
                     className="h-6 w-6 text-red-300 mr-2"
                     width="24"
