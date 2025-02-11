@@ -12,7 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/projects/nscc" element={<ProjectNSCC />} /> {/* Add the route for the Project NSCC page */}
+        <Route path="/projects/nscc" element={<ProjectNSCC />} /> 
       </Routes>
       <Footer />
     </Router>
