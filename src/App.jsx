@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Contact from './components/Contact';
 import ProjectNSCC from './projects/Project-NSCC'; 
 import ProjectBuses from './projects/Buses'; 
+import ProjectShapes from './projects/Shapes'; 
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/nscc" element={<ProjectNSCC />} /> 
         <Route path="/buses" element={<ProjectBuses />} /> 
+        <Route path="/shapes" element={<ProjectShapes />} /> 
       </Routes>
       <Footer />
     </Router>

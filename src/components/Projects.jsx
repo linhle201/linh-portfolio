@@ -52,7 +52,7 @@ const Projects = () => {
     id: 7, 
     title: "Project Java Running Shapes", 
     videoUrl: "../PJ-shape/shape.mp4", 
-    githubUrl: "https://github.com/linhle201/Shapes-Java",
+    githubUrl: "/shapes",
     description: "Built a Java-based application that generates animated geometric shapes, which run and interact with the user. The app provides an engaging, dynamic experience, showcasing real-time visual changes based on user input."
   },
   { 
