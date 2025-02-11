@@ -1,28 +1,32 @@
 import React, { useRef } from 'react';
+import { useParams, Link } from 'react-router-dom';
 
 const Projects = () => {
-const projects = [
-  { 
-    id: 1, 
-    title: "Project Banh Mi A&B", 
-    videoUrl: "../PJ-banhmiA&B/banhmianb.mp4", 
-    githubUrl: "https://www.banhmianb.com/",
-    description: "Design and develop a modern website for Banh Mi A&B, a Vietnamese restaurant. I focused on creating a user-friendly interface that showcases their menu, enables online ordering, and provides important details like hours and location. The design reflects the restaurant’s vibrant atmosphere, ensuring a seamless and engaging experience for customers."
-  },
-  { 
-    id: 2, 
-    title: "Project Tracking Halifax Buses", 
-    videoUrl: "../PJ-bus/bus.mp4", 
-    githubUrl: "https://github.com/linhle201/Halifax-Buses",
-    description: "A project to track real-time bus locations and schedules in Halifax using public transportation APIs. The application provides up-to-date information on bus arrivals, helping users plan their travel efficiently within the city."
-  },
-  { 
-    id: 3, 
-    title: "Project WordPress Theme", 
-    videoUrl: "../Pj-wordpress/wpPage.mp4", 
-    githubUrl: "https://github.com/linhle201/Wordpress-Theme",
-    description: " a custom WordPress theme tailored for magazine-style websites. The theme focuses on creating visually appealing layouts, easy navigation, and a seamless user experience, making it perfect for content-rich websites like magazines."
-  },
+  const { projectId } = useParams(); // Get the projectId from the URL
+
+  // Static list of projects
+  const projects = [
+    { 
+      id: 1, 
+      title: "Project Banh Mi A&B", 
+      videoUrl: "../PJ-banhmiA&B/banhmianb.mp4", 
+      githubUrl: "https://www.banhmianb.com/", // External URL
+      description: "Design and develop a modern website for Banh Mi A&B, a Vietnamese restaurant."
+    },
+    { 
+      id: 2, 
+      title: "Project Tracking Halifax Buses", 
+      videoUrl: "../PJ-bus/bus.mp4", 
+      githubUrl: "https://github.com/linhle201/Halifax-Buses", // External URL
+      description: "A project to track real-time bus locations and schedules in Halifax."
+    },
+    { 
+      id: 3, 
+      title: "Project WordPress Theme", 
+      videoUrl: "../Pj-wordpress/wpPage.mp4", 
+      githubUrl: "/projects/3",  // Internal route
+      description: "A custom WordPress theme tailored for magazine-style websites."
+    },
   { 
     id: 4, 
     title: "Project Restaurant Dashboard", 
@@ -62,8 +66,8 @@ const projects = [
     id: 9, 
     title: "Project Redesign NSCC Website", 
     videoUrl: "../PJ-nscc/nscc.mp4", 
-    githubUrl: "/nscc",
-    description: " This redesign of the Nova Scotia Community College website, focusing on improving user experience and accessibility. The new design features an intuitive interface, streamlined navigation, and enhanced accessibility for all users, ensuring a more inclusive and engaging online experience."
+    githubUrl: "/nscc",  
+    description: "This redesign of the Nova Scotia Community College website, focusing on improving user experience and accessibility. The new design features an intuitive interface, streamlined navigation, and enhanced accessibility for all users, ensuring a more inclusive and engaging online experience."
   },
 ];
 const videoRefs = useRef([]);
@@ -104,12 +108,18 @@ return (
             <div className="absolute inset-0 bg-black opacity-10"></div>
           </div>
           <div className="p-4">
-            <h3 className="text-xl text-red-300 font-semibold">
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                {project.title}
-              </a>
-            </h3>
-            {/* Display the project description */}
+          <h3 className="text-xl text-red-300 font-semibold">
+                {/* Handle internal vs external link */}
+                {project.githubUrl.startsWith('http') ? (
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {project.title}
+                  </a>
+                ) : (
+                  <Link to={project.githubUrl} className="hover:underline">
+                    {project.title}
+                  </Link>
+                )}
+              </h3>
             <p className="text-sm text-white mt-2">{project.description}</p>
           </div>
         </div>
