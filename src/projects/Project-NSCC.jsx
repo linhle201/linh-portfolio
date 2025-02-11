@@ -6,6 +6,7 @@ const ProjectNSCC = () => {
     imageUrls: [
       "../PJ-nscc/final.PNG", // First image
     ],
+    video: "../PJ-nscc/nscc.mp4",
     cta: "../PJ-nscc/cta.png",
     menu: "../PJ-nscc/menu.png",
     colorPaletteUrl: "../PJ-nscc/paletteColors.PNG",
@@ -25,33 +26,44 @@ const ProjectNSCC = () => {
 
       <div className="max-w-6xl mx-auto">
         <div className="project-details bg-black border-4 border-black bg-opacity-40 rounded-lg overflow-hidden shadow-lg p-6">
+          {/* Video Section */}
+          <div className="mb-6">
+            <div className="w-full h-80 mb-6">
+              <video
+                src={project.video}
+                controls
+                className="w-full h-full object-contain rounded-lg"
+                muted
+                loop
+              />
+            </div>
+          </div>
+         
           {/* First image (image on right, description on left) */}
           <div className="flex flex-col md:flex-row items-center mb-6">
-                <div className="text-left md:w-2/3 pr-6">
-                    <h3 className="text-xl text-red-300 font-semibold mt-4">Project Details</h3><br></br>
-                    <p className="text-sm text-white">{project.description}</p>
-                    <p className="text-sm text-white mt-2">{project.details}</p>
-                    <h3 className="text-xl text-red-300 font-semibold mt-4">Color Palette Research</h3><br></br>
-                    <div className="w-full h-64 mb-6">
-                        <img
-                        src={project.colorPaletteUrl}
-                        alt="Color Palette"
-                        className="w-full h-full object-contain rounded-lg"
-                        />
-                    </div><br></br>
-                    <p className="text-sm text-white mb-4">
-                        The color palette was designed with accessibility in mind. We selected a set of colors that ensure high contrast for readability and a modern look. The palette ensures that content is easy to read and the interface is aesthetically pleasing, enhancing the overall user experience.
-                    </p>
-                
-                </div>
-                <div className="md:w-1/3">
-                    <img
-                    src={project.imageUrls[0]}
-                    alt="NSCC Redesign"
-                    className="w-full max-w-lg h-100 object-contain rounded-lg"
-                    />
-                </div>
-                
+            <div className="text-left md:w-2/3 pr-6">
+              <h3 className="text-xl text-red-300 font-semibold mt-4">Project Details</h3><br></br>
+              <p className="text-sm text-white">{project.description}</p>
+              <p className="text-sm text-white mt-2">{project.details}</p>
+              <h3 className="text-xl text-red-300 font-semibold mt-4">Color Palette Research</h3><br></br>
+              <div className="w-full h-64 mb-6">
+                <img
+                  src={project.colorPaletteUrl}
+                  alt="Color Palette"
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div><br></br>
+              <p className="text-sm text-white mb-4">
+                The color palette was designed with accessibility in mind. We selected a set of colors that ensure high contrast for readability and a modern look. The palette ensures that content is easy to read and the interface is aesthetically pleasing, enhancing the overall user experience.
+              </p>
+            </div>
+            <div className="md:w-1/3">
+              <img
+                src={project.imageUrls[0]}
+                alt="NSCC Redesign"
+                className="w-full max-w-lg h-100 object-contain rounded-lg"
+              />
+            </div>
           </div>
 
           {/* Menu Navigation Redesign */}
@@ -92,48 +104,48 @@ const ProjectNSCC = () => {
             ))}
           </ul>
 
-          <div className="mt-4 flex  gap-4">
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <button className="flex items-center justify-center bg-black text-red-300 px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
-                    <svg
-                        className="h-6 w-6 text-red-300 mr-2"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                    </svg>
-                    GitHub
-                    </button>
-                </a>
-               
-            <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
-                <button className="flex items-center justify-center bg-black text-red-300 px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+          <div className="mt-4 flex gap-4">
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+              <button className="flex items-center justify-center bg-black text-red-300 px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
                 <svg
-                    className="h-6 w-6 text-red-300 mr-2"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                  className="h-6 w-6 text-red-300 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-                    <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
-                    <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
-                    <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
-                    <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
-                 Figma
-                </button>
+                GitHub
+              </button>
             </a>
-            </div>
+
+            <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+              <button className="flex items-center justify-center bg-black text-red-300 px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                <svg
+                  className="h-6 w-6 text-red-300 mr-2"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                  <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                  <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                  <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+                  <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+                </svg>
+                Figma
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
