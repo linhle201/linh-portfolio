@@ -125,10 +125,28 @@ const PuzzleGame = () => {
 
             <h3 className="text-xl text-red-300 text-center font-semibold mt-4">Start The Game </h3>
             <p className="text-sm text-white mt-2 mb-5">
-              Welcome to the "Three-in-a-Row" puzzle game! The objective of the game is to fill a grid with colored cells, following a specific pattern. Each cell can be toggled between three states: empty, light pink, and purple. 
-              <br /><br />
-              Click on a cell to cycle through these states and work towards matching the correct solution. Once you've completed the grid, you can use the "Check Puzzle" button to verify if your solution is correct.
-            </p>
+            Welcome to the "Three-in-a-Row" puzzle game! The objective of the game is to fill a grid with colored cells, following a specific pattern. Each cell can be toggled between three states: empty, light pink, and purple. 
+            <br /><br />
+            The puzzle grid size changes every time you start a new game, based on the size provided by the API. This makes each puzzle unique, with varying levels of complexity. 
+            <br /><br />
+            To play, simply click on any cell in the grid. Each click will cycle the state of the cell through the following sequence: 
+            <ul>
+                <li>Empty → Light Pink → Purple → Empty → ... (and so on)</li>
+            </ul>
+            <br />
+            Your goal is to match the correct solution pattern while following the rule that no row or column can contain three cells of the same color (light pink or purple). This rule will help guide your moves and ensure the puzzle is solvable. 
+            <br /><br />
+            <strong>Tips:</strong>
+            <ul>
+                <li>Each puzzle starts with some cells pre-filled, which can serve as clues to help you get started.</li>
+                <li>Use logic and pattern recognition to figure out where to place the light pink and purple cells while ensuring no row or column has three of the same color.</li>
+                <li>Don't forget to use the "Check Puzzle" button to check your progress! You can click it at any time to verify if your current grid arrangement is correct. It will let you know if you've made any mistakes, and you can adjust accordingly.</li>
+            </ul>
+            <br />
+            Once you've completed the grid and confirmed your solution using the "Check Puzzle" button, you'll know if you've successfully solved the puzzle or if you need to try again. 
+            <br /><br />
+            <strong>Good luck and enjoy the challenge!</strong>
+        </p>
 
             {puzzleData ? drawPuzzle() : <p>Loading...</p>}
 
