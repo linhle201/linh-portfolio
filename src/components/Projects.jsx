@@ -45,7 +45,7 @@ const Projects = () => {
     id: 6, 
     title: "Project Three In A Row", 
     videoUrl: "../PJ-gameThreeinarow/threeInARow.mp4", 
-    githubUrl: "https://github.com/linhle201/GameThreeInARow",
+    githubUrl: "/games",
     description: "A classic Tic-Tac-Toe game using JavaScript, featuring an interactive and responsive interface. The game is designed for both desktop and mobile users, offering a smooth and engaging experience for players."
   },
   { 
