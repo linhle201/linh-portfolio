@@ -123,7 +123,12 @@ const PuzzleGame = () => {
               </div>
             </div>
 
-            <h3 className="text-xl text-red-300 text-center font-semibold mt-4">Start The Game </h3>
+            <div className="mb-6">
+              <h3 className="text-xl text-red-300 font-semibold mt-4">Project Description</h3>
+              <p className="text-sm text-white mt-2">{project.description}</p>
+            </div>
+
+            <h3 className="text-2xl text-red-300 text-center font-semibold mt-4">Start The Game </h3>
             <p className="text-sm text-white mt-2 mb-5">
             Welcome to the "Three-in-a-Row" puzzle game! The objective of the game is to fill a grid with colored cells, following a specific pattern. Each cell can be toggled between three states: empty, light pink, and purple. 
             <br /><br />
@@ -145,7 +150,7 @@ const PuzzleGame = () => {
             <br />
             Once you've completed the grid and confirmed your solution using the "Check Puzzle" button, you'll know if you've successfully solved the puzzle or if you need to try again. 
             <br /><br />
-            <strong>Good luck and enjoy the challenge!</strong>
+            <strong class="text-red-300">Good luck and enjoy the challenge!</strong>
         </p>
 
             {puzzleData ? drawPuzzle() : <p>Loading...</p>}
@@ -164,11 +169,6 @@ const PuzzleGame = () => {
             {/* Display the message below the puzzle */}
             <div className="mt-4 text-white text-center">
               {message && <p>{message}</p>}
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl text-red-300 font-semibold mt-4">Project Description</h3>
-              <p className="text-sm text-white mt-2">{project.description}</p>
             </div>
 
             <h3 className="text-xl text-red-300 font-semibold mt-4">Technologies Used</h3>
