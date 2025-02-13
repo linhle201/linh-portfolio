@@ -9,6 +9,7 @@ const ProjectAnb = () => {
     techStack: ["HTML", "CSS", "Canva", "WIX", "CMS Hosting"],
     webAnB: "../PJ-banhmiA&B/webAnB.PNG",
     menu: "../PJ-banhmiA&B/menu.png",
+    menu2: "../PJ-banhmiA&B/menu2.png",
   };
 
   return (
@@ -66,7 +67,12 @@ const ProjectAnb = () => {
                 <img
                 src={project.menu}
                 alt="Restaurant menu"
-                className="h-full object-contain rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
+                className="h-full object-contain rounded-lg shadow-lg hover:scale-105 mr-2 transition-transform duration-300 ease-in-out"
+                />
+                <img
+                src={project.menu2}
+                alt="Restaurant menu2"
+                className="h-full object-contain rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ml-4 ease-in-out"
                 />
             </div>
             </div>
