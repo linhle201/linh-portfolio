@@ -7,6 +7,7 @@ import ProjectNSCC from './projects/Project-NSCC';
 import ProjectBuses from './projects/Buses'; 
 import ProjectShapes from './projects/Shapes'; 
 import ProjectGames from './projects/GamesThree';
+import ProjectAnb from './projects/AnB';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/buses" element={<ProjectBuses />} /> 
         <Route path="/shapes" element={<ProjectShapes />} /> 
         <Route path="/games" element={<ProjectGames />} /> 
+        <Route path="/anb" element={<ProjectAnb />} /> 
       </Routes>
       <Footer />
     </Router>

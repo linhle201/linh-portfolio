@@ -10,7 +10,7 @@ const Projects = () => {
       id: 1, 
       title: "Project Banh Mi A&B", 
       videoUrl: "../PJ-banhmiA&B/banhmianb.mp4", 
-      githubUrl: "https://www.banhmianb.com/", // External URL
+      githubUrl: "/anb", 
       description: "Design and develop a modern website for Banh Mi A&B, a Vietnamese restaurant."
     },
     { 
